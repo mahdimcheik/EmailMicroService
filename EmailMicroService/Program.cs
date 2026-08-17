@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
-builder.Services.AddScoped<EmailService>();
+builder.Services.AddSingleton<EmailService>();
 builder.Services.AddHostedService<KafkaConsumerHostedService>();
 
 var app = builder.Build();
