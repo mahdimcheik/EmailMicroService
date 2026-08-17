@@ -4,3 +4,15 @@ GET {{EmailMicroService_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+POST {{EmailMicroService_HostAddress}}/email/send
+Content-Type: application/json
+
+{
+  "from": "sender@example.com",
+  "to": "recipient@example.com",
+  "subject": "Hello",
+  "body": "<p>Hello from EmailMicroService</p>"
+}
+
+###
