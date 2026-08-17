@@ -7,5 +7,6 @@ namespace EmailMicroService.Models
         string To,
         string Subject,
         string Body,
-        IReadOnlyList<MailAttachment>? Attachments = null);
+        IReadOnlyList<MailAttachment>? Attachments = null
+    );
 }
