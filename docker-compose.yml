@@ -1,0 +1,15 @@
+services:
+  email-microservice:
+    image: mahdimcheik/email-microservice:latest
+    container_name: container-email-microservice
+    restart: unless-stopped
+    env_file:
+      - .env
+    expose:
+      - 8080
+    networks:
+      - global-network
+
+networks:
+  global-network:
+    external: true
